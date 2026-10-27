@@ -1,0 +1,26 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+
+# Local source briefs and delivery archives
+/*.docx
+/*.zip
+
+# Independent reruns; original results remain versioned
+results_repeat/
+results_repeat*/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
