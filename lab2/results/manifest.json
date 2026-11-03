@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-09T22:03:20.700611+00:00",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "rng": "numpy.random.default_rng / PCG64",
+  "config_sha256": "8f981aae1592039094428241fce5b5223138d8669d87b6d56a5ac86483a218b9",
+  "instance_sha256": "47ce505d969b1bf4b1063bb13c5785d281d1d0307aaf0269fa3d6463fa11aded",
+  "source_sha256": {
+    "experiment.py": "8f224ee8308d9c02344f1979e5637aa95fe350600848d904914f6079c209a338",
+    "generate_data.py": "83700e738735ad67c25df8c60d552a016027bed9c9bdd7b1e9d3eb46dcc516ee",
+    "plotting.py": "806fc3345070ee6443dc2bb3f8fa4192b272958feecd13ba1a5732f37247c225",
+    "report.py": "993e66ad7c265bf77b744e00d85c37025b2fb81e955b14ae7c3f772deb7f692e",
+    "routing.py": "c1e4c895b96a9b7dd48bd3228719bd6f0418c6275e1c62362994c20a777e2b3d",
+    "verify_results.py": "4e2146a052f1aee72676c480e203e1ec76a1a6eb2efddc46103532aa3132026b"
+  }
+}

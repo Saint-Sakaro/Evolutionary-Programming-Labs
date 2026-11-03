@@ -11,6 +11,7 @@ Markdown-отчёт, результаты серии экспериментов 
 | № | Тема | Запуск | Отчёт | Проверка |
 |---|---|---|---|---|
 | 1 | Генетический алгоритм для функции Цин, d=5 | [README](lab1/README.md) | [Отчёт](lab1/results/report.md) | [Проверка](lab1/CHECK.md) |
+| 2 | Маршрут доставки с ограничением времени | [README](lab2/README.md) | [Отчёт](lab2/results/report.md) | [Проверка](lab2/CHECK.md) |
 
 Ключевые алгоритмы и операторы реализованы в проекте самостоятельно.
 NumPy используется для численных операций и случайных чисел, Matplotlib — для графиков.
@@ -38,6 +39,7 @@ python -m pip install -r requirements.txt
 
 ~~~bash
 python lab1/experiment.py --output lab1/results_repeat
+python lab2/experiment.py --output lab2/results_repeat
 ~~~
 
 Точные seed, бюджеты и параметры указаны в config.json соответствующей работы.
@@ -49,6 +51,7 @@ python lab1/experiment.py --output lab1/results_repeat
 
 ~~~bash
 python -m unittest discover -s lab1/tests -v
+python -m unittest discover -s lab2/tests -v
 ~~~
 
 При наличии verify_results.py можно дополнительно проверить сохранённые данные,

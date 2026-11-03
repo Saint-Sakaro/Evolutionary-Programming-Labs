@@ -1,0 +1,14 @@
+{
+  "student": {"group": 527, "number": 3, "year": 2026, "variant": 12},
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "common": {
+    "population_size": 80,
+    "budget": 16000,
+    "tournament_size": 3,
+    "crossover_probability": 0.9,
+    "mutation_probability": 0.3
+  },
+  "penalties": [0.1, 5.0],
+  "mutations": ["swap", "inversion"],
+  "baseline_candidate_list": 3
+}
