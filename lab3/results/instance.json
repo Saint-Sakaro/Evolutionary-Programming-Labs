@@ -1,0 +1,209 @@
+{
+  "generation_seed": 5270313,
+  "days": 5,
+  "periods": 6,
+  "rooms": 2,
+  "late_from": 4,
+  "day_names": [
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница"
+  ],
+  "period_starts": [
+    "09:00",
+    "10:40",
+    "12:20",
+    "14:00",
+    "15:40",
+    "17:20"
+  ],
+  "groups": [
+    "Г1",
+    "Г2",
+    "Г3",
+    "Г4"
+  ],
+  "teachers": [
+    "П1",
+    "П2",
+    "П3",
+    "П4"
+  ],
+  "room_names": [
+    "Аудитория 1",
+    "Аудитория 2"
+  ],
+  "events": [
+    {
+      "id": 0,
+      "group": 0,
+      "teacher": 0,
+      "title": "Дискретная математика",
+      "requested_slot": 0
+    },
+    {
+      "id": 1,
+      "group": 0,
+      "teacher": 2,
+      "title": "Английский язык",
+      "requested_slot": 3
+    },
+    {
+      "id": 2,
+      "group": 0,
+      "teacher": 0,
+      "title": "Базы данных",
+      "requested_slot": 13
+    },
+    {
+      "id": 3,
+      "group": 0,
+      "teacher": 2,
+      "title": "Алгоритмы",
+      "requested_slot": 16
+    },
+    {
+      "id": 4,
+      "group": 0,
+      "teacher": 0,
+      "title": "Проектный семинар",
+      "requested_slot": 28
+    },
+    {
+      "id": 5,
+      "group": 0,
+      "teacher": 2,
+      "title": "Программирование",
+      "requested_slot": 29
+    },
+    {
+      "id": 6,
+      "group": 1,
+      "teacher": 1,
+      "title": "Базы данных",
+      "requested_slot": 6
+    },
+    {
+      "id": 7,
+      "group": 1,
+      "teacher": 3,
+      "title": "Программирование",
+      "requested_slot": 9
+    },
+    {
+      "id": 8,
+      "group": 1,
+      "teacher": 1,
+      "title": "Английский язык",
+      "requested_slot": 19
+    },
+    {
+      "id": 9,
+      "group": 1,
+      "teacher": 3,
+      "title": "Алгоритмы",
+      "requested_slot": 22
+    },
+    {
+      "id": 10,
+      "group": 1,
+      "teacher": 1,
+      "title": "Дискретная математика",
+      "requested_slot": 4
+    },
+    {
+      "id": 11,
+      "group": 1,
+      "teacher": 3,
+      "title": "Проектный семинар",
+      "requested_slot": 5
+    },
+    {
+      "id": 12,
+      "group": 2,
+      "teacher": 2,
+      "title": "Английский язык",
+      "requested_slot": 12
+    },
+    {
+      "id": 13,
+      "group": 2,
+      "teacher": 0,
+      "title": "Базы данных",
+      "requested_slot": 15
+    },
+    {
+      "id": 14,
+      "group": 2,
+      "teacher": 0,
+      "title": "Программирование",
+      "requested_slot": 25
+    },
+    {
+      "id": 15,
+      "group": 2,
+      "teacher": 2,
+      "title": "Алгоритмы",
+      "requested_slot": 28
+    },
+    {
+      "id": 16,
+      "group": 2,
+      "teacher": 2,
+      "title": "Проектный семинар",
+      "requested_slot": 10
+    },
+    {
+      "id": 17,
+      "group": 2,
+      "teacher": 0,
+      "title": "Дискретная математика",
+      "requested_slot": 11
+    },
+    {
+      "id": 18,
+      "group": 3,
+      "teacher": 3,
+      "title": "Дискретная математика",
+      "requested_slot": 18
+    },
+    {
+      "id": 19,
+      "group": 3,
+      "teacher": 1,
+      "title": "Программирование",
+      "requested_slot": 21
+    },
+    {
+      "id": 20,
+      "group": 3,
+      "teacher": 1,
+      "title": "Базы данных",
+      "requested_slot": 1
+    },
+    {
+      "id": 21,
+      "group": 3,
+      "teacher": 3,
+      "title": "Проектный семинар",
+      "requested_slot": 4
+    },
+    {
+      "id": 22,
+      "group": 3,
+      "teacher": 3,
+      "title": "Английский язык",
+      "requested_slot": 16
+    },
+    {
+      "id": 23,
+      "group": 3,
+      "teacher": 1,
+      "title": "Алгоритмы",
+      "requested_slot": 17
+    }
+  ],
+  "description": "Structured synthetic requests create a known tradeoff: exact requests have gaps and late classes."
+}

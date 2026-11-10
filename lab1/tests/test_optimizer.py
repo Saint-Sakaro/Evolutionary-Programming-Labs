@@ -1,4 +1,4 @@
-"""Contract checks: mathematical minimum, constraints, budget and reproducibility."""
+"""Проверки функции Qing, операторов и бюджета поиска."""
 
 import sys
 import unittest
@@ -12,29 +12,37 @@ from optimizer import blx_alpha, genetic_algorithm, qing, random_search, reflect
 
 class OptimizerTests(unittest.TestCase):
     def setUp(self):
-        self.problem = {'dimension': 5, 'lower': -500., 'upper': 500.}
-        self.parameters = {'population_size': 40, 'budget': 837,
-                           'tournament_size': 3, 'crossover_probability': .9,
-                           'blx_alpha': .5, 'mutation_probability': .2,
-                           'mutation_sigma': .1}
+        self.problem = {"dimension": 5, "lower": -500.0, "upper": 500.0}
+        self.parameters = {
+            "population_size": 40,
+            "budget": 837,
+            "tournament_size": 3,
+            "crossover_probability": 0.9,
+            "blx_alpha": 0.5,
+            "mutation_probability": 0.2,
+            "mutation_sigma": 0.1,
+        }
 
     def test_known_function_values_and_all_minima(self):
         roots = np.sqrt(np.arange(1, 6))
-        signs = np.array([[1 if bits & (1 << j) else -1 for j in range(5)]
-                          for bits in range(32)])
+        signs = np.array(
+            [[1 if bits & (1 << j) else -1 for j in range(5)] for bits in range(32)]
+        )
         np.testing.assert_allclose(qing(signs * roots), 0, atol=1e-26)
-        self.assertEqual(float(qing(np.zeros(5))), 55.)
-        self.assertEqual(float(qing(np.ones(5))), 30.)
+        self.assertEqual(float(qing(np.zeros(5))), 55.0)
+        self.assertEqual(float(qing(np.ones(5))), 30.0)
 
     def test_reflection_handles_multiple_overshoots(self):
-        x = np.array([-2501., -501., -500., 0., 500., 501., 2501.])
-        np.testing.assert_allclose(reflect(x, -500., 500.),
-                                   [-499., -499., -500., 0., 500., 499., 499.])
+        x = np.array([-2501.0, -501.0, -500.0, 0.0, 500.0, 501.0, 2501.0])
+        np.testing.assert_allclose(
+            reflect(x, -500.0, 500.0),
+            [-499.0, -499.0, -500.0, 0.0, 500.0, 499.0, 499.0],
+        )
 
     def test_blx_extended_interval(self):
         first = np.zeros((1000, 5))
-        second = np.full_like(first, 2.)
-        children = blx_alpha(first, second, .5, 1., np.random.default_rng(5))
+        second = np.full_like(first, 2.0)
+        children = blx_alpha(first, second, 0.5, 1.0, np.random.default_rng(5))
         self.assertTrue(np.all((children >= -1) & (children <= 3)))
         self.assertTrue(np.any(children < 0) and np.any(children > 2))
 
@@ -60,24 +68,31 @@ class OptimizerTests(unittest.TestCase):
 
     def test_count_actual_objective_evaluations(self):
         from unittest.mock import patch
+
         original = qing
         for algorithm in (genetic_algorithm, random_search):
             count = 0
+
             def counted(x):
                 nonlocal count
                 count += len(x)
                 return original(x)
-            with patch('optimizer.qing', side_effect=counted):
+
+            with patch("optimizer.qing", side_effect=counted):
                 result = algorithm(self.problem, self.parameters, 0)
-            self.assertEqual(count, self.parameters['budget'])
+            self.assertEqual(count, self.parameters["budget"])
             self.assertEqual(count, result.evaluations)
 
     def test_invalid_parameters_are_rejected(self):
-        for changes in ({'budget': 39}, {'population_size': 29},
-                        {'mutation_probability': 1.1}, {'mutation_sigma': -1}):
+        for changes in (
+            {"budget": 39},
+            {"population_size": 29},
+            {"mutation_probability": 1.1},
+            {"mutation_sigma": -1},
+        ):
             with self.assertRaises(ValueError):
                 genetic_algorithm(self.problem, dict(self.parameters, **changes), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

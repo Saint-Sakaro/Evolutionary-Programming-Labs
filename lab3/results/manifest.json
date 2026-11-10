@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-09T22:20:49.908151+00:00",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "rng": "numpy.random.default_rng / PCG64",
+  "config_sha256": "8a7a145b2b4410e29c954a040e562e86fb1e9d5569f96c89a8f713fade87586c",
+  "instance_sha256": "4270f347312a679f557d743464e35643c9865d8b0b98ad43d8c5c06dbda400e6",
+  "source_sha256": {
+    "experiment.py": "68975780e7a542ee873a4fde9f34c9b95fd042220616701e9f5d5fd31a8577c8",
+    "generate_data.py": "586316c59181aa35ced9cf950aba5e45c872c0f5a8382b154c65cba94bdd5d18",
+    "plotting.py": "b02080d22754658dafdc639ccb93baf4b1dbed471e11c762dc85d3c787dcf40a",
+    "report.py": "60f887ab7d895b9d00a43f0de931e2f6e9a1e9434c65b51c296ca9f370701d3b",
+    "scheduling.py": "a7c0e2424c87f78f8a0f0c583af2045887d1b2f6eb3161cac795fb755f7dc4cd",
+    "verify_results.py": "22c189468dc8693de8014bc65fb453e3d6ab29c9fffe7a33d845031577e45894"
+  },
+  "hypervolume_reference": [
+    25,
+    81,
+    25
+  ],
+  "weighted_normalization": [
+    24,
+    80,
+    24
+  ]
+}
